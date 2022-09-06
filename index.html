@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Artyom Kiushkin">
+        <meta name="description" content="First lab of Web-Programming from second course of SE ITMO University">
+
+        <title>WEB. Lab #1</title>
+
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <!-- Header -->
+    <body>
+        <div class="header light-theme primary">
+            <div class="inner_header">
+                <div class="logo_container">
+                    <h1>WEB.<span>LAB1</span></h1>
+                </div>
+                <div class="contact">
+                    <h1>Киушкин Артем Эдуардович.<span>Вариант 21700</span></h1>
+                </div>
+            </div>
+        </div>
+        <div class="content_container light-theme background">
+            <div id="graph_wrapper" class="content_wrapper">
+                <canvas id="graph"></canvas>
+            </div>
+            <div id="input_wrapper" class="content_wrapper">
+                <form id="request_form" onsubmit="return false">
+                    <div class="button_group column-flex">
+                        <h3 class="button_group_header">X</h3>
+                        <div class="form_radio">
+                            <input checked="checked" class="radio_button" id="radio-1" type="radio" name="x" value="-2">
+                            <label for="radio-1">-2</label>
+                        </div>
+                        <div class="form_radio">
+                            <input class="radio_button" id="radio-2" type="radio" name="x" value="-1.5">
+                            <label for="radio-2">-1.5</label>
+                        </div>
+                        <div class="form_radio">
+                            <input class="radio_button" id="radio-3" type="radio" name="x" value="-1">
+                            <label for="radio-3">-1</label>
+                        </div>
+                        <div class="form_radio">
+                            <input class="radio_button" id="radio-4" type="radio" name="x" value="-0.5">
+                            <label for="radio-4">-0.5</label>
+                        </div>
+                        <div class="form_radio">
+                            <input class="radio_button" id="radio-5" type="radio" name="x" value="0">
+                            <label for="radio-5">0</label>
+                        </div>
+                        <div class="form_radio">
+                            <input class="radio_button" id="radio-6" type="radio" name="x" value="0.5">
+                            <label for="radio-6">0.5</label>
+                        </div>
+                        <div class="form_radio">
+                            <input class="radio_button" id="radio-7" type="radio" name="x" value="1">
+                            <label for="radio-7">1</label>
+                        </div>
+                        <div class="form_radio">
+                            <input class="radio_button" id="radio-8" type="radio" name="x" value="1.5">
+                            <label for="radio-8">1.5</label>
+                        </div>
+                        <div class="form_radio">
+                            <input class="radio_button" id="radio-9" type="radio" name="x" value="2">
+                            <label for="radio-9">2</label>
+                        </div>
+                    </div>
+                    <div class="button_group column-flex">
+                        <h3 id="y_label" class="button_group_header">Y</h3>
+                        <div class="text_field">
+                            <input id="text_field-1" type="text" name="y" class="text_field_input" placeholder="[-3;5]" maxlength="6">
+                        </div>
+                    </div>
+                    <div class="button_group row-flex">
+                        <h3 class="button_group_header">R</h3>
+                        <button type="button" name="r" class="r_toggle light-theme accent active" value="1">1</button>
+                        <button type="button" name="r" class="r_toggle light-theme accent" value="2">2</button>
+                        <button type="button" name="r" class="r_toggle light-theme accent" value="3">3</button>
+                        <button type="button" name="r" class="r_toggle light-theme accent" value="4">4</button>
+                        <button type="button" name="r" class="r_toggle light-theme accent" value="5">5</button>
+                        <input id="r_input" name="r" value="1" type="hidden">
+                    </div>
+                    <div class="button_group row-flex">
+                        <input type="button" id="send_request" class="submit_button" value="Enter data">
+                        <input type="button" id="clear_request" class="submit_button" value="Clear">
+                    </div>
+                </form>
+            </div>
+            <table id="history" class="content_wrapper table light-theme">
+                <tr>
+                    <th>Request time</th>
+                    <th>Execution time</th>
+                    <th>Data</th>
+                    <th>Respond</th>
+                </tr>
+            </table>
+        </div>
+    
+        <script type="text/javascript" src="js/libraries/jquery-3.6.1.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>
